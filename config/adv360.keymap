@@ -31,6 +31,86 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
+
+    excl_one: excl_one {
+        compatible = "zmk,behavior-mod-morph";
+        label = "EXCL_ONE";
+        #binding-cells = <0>;
+        bindings = <&kp EXCL>, <&kp KP_N1>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    at_two: at_two {
+        compatible = "zmk,behavior-mod-morph";
+        label = "AT_TWO";
+        #binding-cells = <0>;
+        bindings = <&kp AT>, <&kp KP_N2>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    hash_three: hash_three {
+        compatible = "zmk,behavior-mod-morph";
+        label = "HASH_THREE";
+        #binding-cells = <0>;
+        bindings = <&kp HASH>, <&kp KP_N3>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    dllr_four: dllr_four {
+        compatible = "zmk,behavior-mod-morph";
+        label = "DLLR_FOUR";
+        #binding-cells = <0>;
+        bindings = <&kp DLLR>, <&kp KP_N4>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    prcnt_five: prcnt_five {
+        compatible = "zmk,behavior-mod-morph";
+        label = "PRCNT_FIVE";
+        #binding-cells = <0>;
+        bindings = <&kp PRCNT>, <&kp KP_N5>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    caret_six: caret_six {
+        compatible = "zmk,behavior-mod-morph";
+        label = "CARET_SIX";
+        #binding-cells = <0>;
+        bindings = <&kp CARET>, <&kp KP_N6>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    amps_seven: amps_seven {
+        compatible = "zmk,behavior-mod-morph";
+        label = "AMPS_SEVEN";
+        #binding-cells = <0>;
+        bindings = <&kp AMPS>, <&kp KP_N7>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    astrk_eight: astrk_eight {
+        compatible = "zmk,behavior-mod-morph";
+        label = "ASTRK_EIGHT";
+        #binding-cells = <0>;
+        bindings = <&kp ASTRK>, <&kp KP_N8>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    lpar_nine: lpar_nine {
+        compatible = "zmk,behavior-mod-morph";
+        label = "LPAR_NINE";
+        #binding-cells = <0>;
+        bindings = <&kp LPAR>, <&kp KP_N9>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    rpar_zero: rpar_zero {
+        compatible = "zmk,behavior-mod-morph";
+        label = "RPAR_ZERO";
+        #binding-cells = <0>;
+        bindings = <&kp RPAR>, <&kp KP_N0>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
   };
 
     keymap {
@@ -39,7 +119,7 @@
 
         default_layer {
             bindings = <
- &kp EQUAL     &kp N1     &kp N2    &kp N3     &kp N4  &kp N5               &tog 1                                                                &mo 3  &kp N6  &kp N7    &kp N8    &kp N9    &kp N0  &kp MINUS
+ &kp EQUAL     &excl_one     &at_two    &hash_three     &dllr_four  &prcnt_five               &tog 1                                                                &mo 3  &caret_six  &amps_seven    &astrk_eight    &lpar_nine    &rpar_zero  &kp MINUS
    &kp TAB    &kp SQT  &kp COMMA   &kp DOT      &kp P   &kp Y                &none                                                                &none   &kp F   &kp G     &kp C     &kp R     &kp L   &kp FSLH
  &kp LCTRL      &kp A      &kp O     &kp E      &kp U   &kp I                &none   &kp DEL  &kp LALT                   &kp LGUI  &kp RCTRL      &none   &kp D   &kp H     &kp T     &kp N     &kp S   &kp BSLH
  &kp LSHFT   &kp SEMI      &kp Q     &kp J      &kp K   &kp X                                 &kp HOME                  &kp PG_UP                         &kp B   &kp M     &kp W     &kp V     &kp Z  &kp RSHFT
